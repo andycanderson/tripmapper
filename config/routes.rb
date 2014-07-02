@@ -8,5 +8,6 @@ Rails.application.routes.draw do
  get '/new_user' => 'users#new'
  post '/new_user' => 'users#create'
 
+ get '/mylocations' => 'users#show'
  
 end

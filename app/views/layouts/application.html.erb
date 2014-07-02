@@ -7,8 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<!-- when logged in show this -->
+	<% if @current_user %>
 	<a href="/mylocations">My Page</a>
 	<a href="/logout">Logout</a>
+	<% end %>
 <%= yield %>
 
 </body>
