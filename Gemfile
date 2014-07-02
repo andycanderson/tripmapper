@@ -38,6 +38,10 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+# # for images
+# gem "mongoid-paperclip", :require => "mongoid_paperclip"
+
 gem "mongoid", '~> 4.0.0.rc1', github: 'mongoid/mongoid'
 gem "geocoder"
 gem "gmaps4rails"
