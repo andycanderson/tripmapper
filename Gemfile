@@ -42,6 +42,7 @@ gem 'bcrypt', '~> 3.1.7'
 # # for images
 # gem "mongoid-paperclip", :require => "mongoid_paperclip"
 
+gem 'pry', '~> 0.10.0'
 gem "mongoid", '~> 4.0.0.rc1', github: 'mongoid/mongoid'
 gem "geocoder"
 gem "gmaps4rails"

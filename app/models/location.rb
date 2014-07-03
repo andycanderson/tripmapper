@@ -3,6 +3,7 @@ class Location
 	include Geocoder::Model::Mongoid
 
 	belongs_to :trip
+	belongs_to :user
 
 	field :coordinates, type:Array
 	field :address

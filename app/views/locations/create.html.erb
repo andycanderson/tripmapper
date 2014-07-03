@@ -1,0 +1,13 @@
+<h1>created point</h1>
+
+<!-- form for new location -->
+<%=form_for Location.new, url: "/update_location/#{@location_id}" do |f|%>
+	<%=f.text_field :address, placeholder: "Enter Address" %>
+	<%=f.text_field :description, placeholder: "Enter Description" %>
+	<%=f.submit "Go!" %>
+<%end%>
+
+<!-- map -->
+<div style='width: 800px;'>
+  <div id="custom_style" style='width: 800px; height: 400px;'></div>
+</div>

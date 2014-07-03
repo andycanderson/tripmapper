@@ -3,4 +3,7 @@ class Trip
 
 	belongs_to :user
 	has_many :locations
+
+	field :trip_name, type: String
+
 end

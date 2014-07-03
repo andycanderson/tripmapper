@@ -1,0 +1,14 @@
+<h1>New location</h1>
+
+<!-- form for new location -->
+<!-- attaches trip_id to created document -->
+<%=form_for Location.new, url: "/create_location/#{@trip_id}" do |f|%>
+	<%=f.text_field :address, placeholder: "Enter Address" %>
+	<%=f.text_field :description, placeholder: "Enter Description" %>
+	<%=f.submit "Go!" %>
+<%end%>
+
+<!-- map -->
+<div style='width: 800px;'>
+  <div id="custom_style" style='width: 800px; height: 400px;'></div>
+</div>
