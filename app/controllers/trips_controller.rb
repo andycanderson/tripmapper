@@ -15,8 +15,21 @@ class TripsController < ApplicationController
 
 	# modify this method
 	def update
+		@trip_id = params[:id]
 		trip = Trip.find_by(id: params[:id])
+	end
+
+	def save
+		trip = Trip.find_by(id: params[:id])
+		trip.trip_name = params[:trip][:trip_name]
+		trip.save!
+
 		redirect_to "/mylocations"
+	end
+
+	def show
+		trip = Trip.find_by(id: params[:id])
+
 	end
 
 	def delete

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
 # TRIP - UPDATE AND DELETE
  get '/trip_update/:id' => 'trips#update'
+ post '/trip_save/:id' => 'trips#save'
  get '/trip_delete/:id' => 'trips#delete' 
 
 # SHOW ALL LOCATIONS OF TRIP
@@ -34,6 +35,10 @@ Rails.application.routes.draw do
  get '/update_location/:id' => 'locations#display_searched'
  post '/change_location/:id' => 'locations#update'
  get '/save_location/:id' => 'locations#save'
+
+# LOCATION DELETE
+ get '/delete_location/:id' => 'locations#delete'
+
  
 
 

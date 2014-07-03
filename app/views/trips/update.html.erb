@@ -1,0 +1,7 @@
+<h1>Trip update</h1>
+
+<%= form_for Trip.new, url: "/trip_save/#{@trip_id}" do |f| %>
+	<%= f.label :trip_name %>
+	<%= f.text_field :trip_name %>
+	<%= f.submit "Submit Changes" %>
+<% end %>

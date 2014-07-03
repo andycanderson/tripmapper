@@ -46,11 +46,23 @@ class LocationsController < ApplicationController
 
 	def show
 		@trip_locations = Location.where(trip_id: params[:id])
-		binding.pry
+		@trip_id = params[:id]
+
+		@hash = Gmaps4rails.build_markers(@trip_locations) do |location, marker|
+  			marker.lat location.to_coordinates[0]
+  			marker.lng location.to_coordinates[1]
+  			marker.infowindow location.description
+  			marker.picture({
+          	"url" => "http://i.imgur.com/1OCtNP3.png",
+          	"width" =>  36,
+          	"height" => 36})
+		end
 	end
 
+# going twice through
 	def delete 
-
+		Location.find_by(id: params[:id]).destroy
+		redirect_to "/mylocations"
 	end
 
 end
