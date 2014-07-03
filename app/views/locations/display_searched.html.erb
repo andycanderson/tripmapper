@@ -1,9 +1,10 @@
-<h1>created point</h1>
+<h1>Displaying Searched and Edit</h1>
 
 <!-- form for new location -->
-<%=form_for Location.new, url: "/update_location/#{@location_id}" do |f|%>
+<%=form_for Location.new, url: "/change_location/#{@location_id}" do |f|%>
 	<%=f.text_field :address, placeholder: "Enter Address" %>
 	<%=f.text_field :description, placeholder: "Enter Description" %>
+	<a href="/save_location/<%=@location_id%>">Save!</a>
 	<%=f.submit "Go!" %>
 <%end%>
 

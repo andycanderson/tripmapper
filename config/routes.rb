@@ -28,11 +28,12 @@ Rails.application.routes.draw do
 # LOCATION - MAKE NEW AND SAVE
  get '/new_location/:id' => 'locations#new'
  post '/create_location/:id' => 'locations#create'
-
+ 
 
 # LOCATION UPDATE SEARCHING
- get '/update_location/:id' => 'locations#update'
- post '/update_location/:id' => 'locations#save'
+ get '/update_location/:id' => 'locations#display_searched'
+ post '/change_location/:id' => 'locations#update'
+ get '/save_location/:id' => 'locations#save'
  
 
 
