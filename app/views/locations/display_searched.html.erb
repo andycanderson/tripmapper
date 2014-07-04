@@ -1,12 +1,19 @@
-<h1>Displaying Searched and Edit</h1>
+<div class="left_container">
+	<div class="center">
+		<div class="save">
+			<h1 id="found">Found It?</h1>
+			<a id="save" href="/save_location/<%=@location_id%>"><button id="save_button">Save!</button></a>
+		</div>
+		<!-- form for new location -->
 
-<!-- form for new location -->
-<%=form_for Location.new, url: "/change_location/#{@location_id}" do |f|%>
-	<%=f.text_field :address, placeholder: "Enter Address" %>
-	<%=f.text_field :description, placeholder: "Enter Description" %>
-	<a href="/save_location/<%=@location_id%>">Save!</a>
-	<%=f.submit "Go!" %>
-<%end%>
+		<h2>Search Again</h2>
+		<%=form_for Location.new, url: "/change_location/#{@location_id}" do |f|%>
+			<%=f.submit "Go!", :class => 'submit'%>
+			<%=f.text_field :address, placeholder: "Enter Address" %>
+			<%=f.text_area :description, :cols => "19", :rows => "10", placeholder: "Enter Description" %>
+		<%end%>
+	</div>
+</div>
 
 <!-- map -->
 <div>

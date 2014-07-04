@@ -5,17 +5,19 @@
 		<div id="new_trip">
 			<%= form_for Trip.new, url: "/new_trip" do |f| %>
 				<%= f.text_field :trip_name, placeholder: "Enter New Trip" %>
-				<%= f.submit "New Trip" %>
+				<%= f.submit "New Trip", :class => 'submit' %>
 			<% end %>
 		</div>
 
 		<!-- all trips made -->
-		<h3>All My Trips</h3>
+		<h2>All My Trips</h2>
 		<% @users_trips.to_a.each do |x|%>
-			<h5><a href="/trip_locations/<%=x.id%>"><%=x.trip_name%></h5>
-			<a href="/trip_update/<%=x.id%>">update trip</a>
-			<a href="/new_location/<%=x.id%>">add locations</a>
-			<a href="/trip_delete/<%=x.id%>">delete</a>
+			<div>
+				<a class="edit_link" href="/trip_update/<%=x.id%>">U</a>
+				<a class="edit_link" href="/new_location/<%=x.id%>"><span class="move_down">+</span></a>
+				<a class="edit_link" href="/trip_delete/<%=x.id%>"><span>-</span></a>
+				<a href="/trip_locations/<%=x.id%>"><h4><%=x.trip_name%></h4></a>
+			</div>
 		<%end%>
 	</div>
 </div>
