@@ -1,27 +1,25 @@
-<h1>Trip Mapper</h1>
+<div class="login">
+	<div class="center_login">
+		<h1>Trip Mapper</h1>
+		<h3>Login</h3>
+		<%= form_tag '/login' do |f| %>
+			<%= text_field_tag :user_email, nil, placeholder: "ENTER EMAIL"%>
+			<br>
+			<%= password_field_tag :password, nil, placeholder: "ENTER PASSWORD"%>
+			<br>
+			<%= submit_tag "Login" %>
+		<% end %>
 
-<h3>Login</h3>
-<%= form_tag '/login' do |f| %>
-	<%= label_tag :user_email%>
-	<%= text_field_tag :user_email%>
-	<br>
-	<%= label_tag :password%>
-	<%= password_field_tag :password %>
-	<br>
-	<%= submit_tag "Login" %>
-<% end %>
-
-<br>
-<h3>Create Account</h3>
-<%= form_for User.new, url: '/new_user' do |f| %>
-	<%= f.label :email %>
-	<%= f.email_field :email %>
-	<br>
-	<%= f.label :password %>
-	<%= f.password_field :password %>
-	<br>
-	<%= f.label :password_confirmation %>
-	<%= f.password_field :password_confirmation %>
-	<br>
-	<%= f.submit "Create Account" %>
-<% end %>
+		<br>
+		<h3>Create Account</h3>
+		<%= form_for User.new, url: '/new_user' do |f| %>
+			<%= f.email_field :email, placeholder: "ENTER EMAIL" %>
+			<br>
+			<%= f.password_field :password, placeholder: "ENTER PASSWORD" %>
+			<br>
+			<%= f.password_field :password_confirmation , placeholder: "CONFIRM PASSWORD"%>
+			<br>
+			<%= f.submit "Create Account" %>
+		<% end %>
+	</div>
+</div>

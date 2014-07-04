@@ -59,7 +59,6 @@ class LocationsController < ApplicationController
 		end
 	end
 
-# going twice through
 	def delete 
 		Location.find_by(id: params[:id]).destroy
 		redirect_to "/mylocations"

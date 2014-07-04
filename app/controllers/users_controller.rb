@@ -20,7 +20,7 @@ class UsersController < ApplicationController
 		@users_trips = Trip.where(user_id: @current_user.id)
 
 		# change so only gets user's locations
-		@all_locations = Location.all
+		@all_locations = Location.where(user_id: @current_user.id)
 		@hash = Gmaps4rails.build_markers(@all_locations) do |location, marker|
   			marker.lat location.to_coordinates[0]
   			marker.lng location.to_coordinates[1]

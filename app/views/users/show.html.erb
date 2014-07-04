@@ -13,13 +13,13 @@
 <% @users_trips.to_a.each do |x|%>
 	<h5><a href="/trip_locations/<%=x.id%>"><%=x.trip_name%></h5>
 	<a href="/trip_update/<%=x.id%>">update trip</a>
-	<a href="/add_location/<%=x.id%>">add locations</a>
+	<a href="/new_location/<%=x.id%>">add locations</a>
 	<a href="/trip_delete/<%=x.id%>">delete</a>
 <%end%>
 
 
 <!-- map -->
 <h2>All My Locations</h2>
-<div style='width: 800px;'>
-  <div id="custom_style" style='width: 800px; height: 400px;'></div>
+<div>
+  <div id="custom_style"></div>
 </div>
