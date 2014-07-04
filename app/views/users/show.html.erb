@@ -1,25 +1,26 @@
-<h1><%=@user.email.capitalize%>'s TripMapper</h1>
+<div class="left_container">
+	<div class="center">
+		<h1>Let's Get Started</h1>
+		<!-- insert form for new trip -->
+		<div id="new_trip">
+			<%= form_for Trip.new, url: "/new_trip" do |f| %>
+				<%= f.text_field :trip_name, placeholder: "Enter New Trip" %>
+				<%= f.submit "New Trip" %>
+			<% end %>
+		</div>
 
-
-<!-- insert form for new trip -->
-<%= form_for Trip.new, url: "/new_trip" do |f| %>
-	<%= f.label :trip_name %>
-	<%= f.text_field :trip_name %>
-	<%= f.submit "New Trip" %>
-<% end %>
-
-<!-- all trips made -->
-<h3>my trips</h3>
-<% @users_trips.to_a.each do |x|%>
-	<h5><a href="/trip_locations/<%=x.id%>"><%=x.trip_name%></h5>
-	<a href="/trip_update/<%=x.id%>">update trip</a>
-	<a href="/new_location/<%=x.id%>">add locations</a>
-	<a href="/trip_delete/<%=x.id%>">delete</a>
-<%end%>
-
+		<!-- all trips made -->
+		<h3>All My Trips</h3>
+		<% @users_trips.to_a.each do |x|%>
+			<h5><a href="/trip_locations/<%=x.id%>"><%=x.trip_name%></h5>
+			<a href="/trip_update/<%=x.id%>">update trip</a>
+			<a href="/new_location/<%=x.id%>">add locations</a>
+			<a href="/trip_delete/<%=x.id%>">delete</a>
+		<%end%>
+	</div>
+</div>
 
 <!-- map -->
-<h2>All My Locations</h2>
 <div>
   <div id="custom_style"></div>
 </div>
