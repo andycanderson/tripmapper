@@ -154,12 +154,18 @@
  	margin:0;
  	padding:0;
  }
+
+ /*not used*/
  .other_page span{
  	font-size: 20px;
  }
+
+
  .move_down{
  	vertical-align: -7%;
  }
+ /*not used end*/
+
  .new_location{
  	margin-top: 5%;
  	text-align: right;
@@ -170,6 +176,7 @@
  }
  .save{
  	text-align: center;
+ 	margin-bottom: 10%;
  }
  .other_page .submit:hover{
  	background-color: rgba(0,100,180,1);
@@ -193,6 +200,93 @@
  }
  #found{
  	font-size: 40px;
+ }
+ #new_location_button{
+ 	margin-top: 10%;
+ }
+ #new_location_link{
+
+ }
+ #scrollable_locations{
+ 	margin-top: 10px;
+ 	overflow: scroll;
+ 	height:400px;
+ }
+ #scrollable_locations p{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ #update_trip_form{
+ 	margin-top: 5%;
+ 	margin-bottom: 5%;
+ 	text-align: center;
+ }
+ #trip_trip_name{
+ 	width:80%;
+ }
+ #update_scrollable_locations{
+ 	text-align: left;
+ 	margin-top: 10px;
+ 	overflow: scroll;
+ 	height:230px;
+ }
+ #update_scrollable_locations p{
+ 	padding: 0;
+ 	margin: 0;
+ }
+ #update_locations{
+ 	margin:15% 0 0 0;
+ 	padding:0;
+ }
+ #new_location_button_update{
+ 	/*location button in update trip view*/
+ 	text-align: center;
+ }
+ #my_locations_header{
+ 	padding:0;
+ 	margin: 25% 0 0 0;
+ 	text-align: left;
+ }
+ #scrollable_trips{
+ 	margin-top: 10px;
+ 	overflow: scroll;
+ 	height:400px;
+ }
+ .u_button{
+ 	border:gray 1px solid;
+ 	display:inline-block;
+ 	width:20px;
+ 	height:20px;
+ 	text-align: center;
+ 	border-radius: 70px;
+ }
+ .plus_button{
+ 	border:gray 1px solid;
+ 	display:inline-block;
+ 	width:20px;
+ 	height:20px;
+ 	text-align: center;
+ 	border-radius: 70px;
+ }
+ .minus_button{
+ 	border:gray 1px solid;
+ 	display:inline-block;
+ 	width:20px;
+ 	height:20px;
+ 	text-align: center;
+ 	border-radius: 70px;
+ }
+ .u_button:hover{
+ 	background-color: rgba(90, 50, 130, 1);
+ 	color: white;
+ }
+ .plus_button:hover{
+ 	background-color: rgba(90, 50, 130, 1);
+ 	color: white;
+ }
+ .minus_button:hover{
+ 	background-color: rgba(90, 50, 130, 1);
+ 	color: white;
  }
 
 

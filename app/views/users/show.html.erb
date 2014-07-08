@@ -1,6 +1,6 @@
 <div class="left_container">
 	<div class="center">
-		<h1>Let's Get Started</h1>
+		<h1 id="my_locations_header">Let's Get Started</h1>
 		<!-- insert form for new trip -->
 		<div id="new_trip">
 			<%= form_for Trip.new, url: "/new_trip" do |f| %>
@@ -11,14 +11,17 @@
 
 		<!-- all trips made -->
 		<h2>All My Trips</h2>
-		<% @users_trips.to_a.each do |x|%>
-			<div>
-				<a class="edit_link" href="/trip_update/<%=x.id%>">U</a>
-				<a class="edit_link" href="/new_location/<%=x.id%>"><span class="move_down">+</span></a>
-				<a class="edit_link" href="/trip_delete/<%=x.id%>"><span>-</span></a>
-				<a href="/trip_locations/<%=x.id%>"><h4><%=x.trip_name%></h4></a>
-			</div>
-		<%end%>
+		<div id="scrollable_trips">
+			<% @users_trips.to_a.each do |x|%>
+				<div>
+					<a class="edit_link" href="/trip_update/<%=x.id%>"><div class="u_button">U</div></a>
+					<a class="edit_link" href="/new_location/<%=x.id%>"><div class="plus_button">+</div></a>
+					<a class="edit_link" href="/trip_delete/<%=x.id%>"><div class="minus_button">-</div></a>
+					<a href="/trip_locations/<%=x.id%>"><h4><%=x.trip_name%></h4></a>
+					<br><br>
+				</div>
+			<%end%>
+		</div>
 	</div>
 </div>
 

@@ -1,12 +1,21 @@
-<h1>All locations for trip</h1>
-<% @trip_locations.to_a.each do |location|%>
-	<p><%=location.address%></p>
-	<a href="/delete_location/<%=location.id%>">delete</a>
-	<a href="/update_location/<%=location.id%>">update</a>
-<%end%>
-
-<br>
-<a href="/new_location/<%=@trip_id%>">Add New Location to Trip</a>
+<div class="left_container">
+	<div class="center">
+		<h1>All locations for <%=@trip_name%></h1>
+		<div id="new_location_button">
+			<a id="new_location_link" href="/new_location/<%=@trip_id%>">+ Add New Location to Trip</a>
+		</div>
+		<div id="scrollable_locations">
+			<% @trip_locations.to_a.each do |location|%>
+				<p><%=location.address%></p>
+				<p><%=location.to_coordinates[0]%>, <%=location.to_coordinates[1]%></p>
+				<p><%=location.description%></p>
+				<a href="/delete_location/<%=location.id%>">delete</a>
+				<a href="/update_location/<%=location.id%>">update</a>
+				<br><br>
+			<%end%>
+		</div>
+	</div>
+</div>
 
 <!-- map -->
 <div>
