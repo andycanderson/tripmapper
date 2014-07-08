@@ -1,10 +1,10 @@
 class LocationsController < ApplicationController
 	def new
+		# pass trip id to form
 		@trip_id = params[:id]
 	end
 
 	def create
-		@trip_id = params[:id]
 		location = Location.new
 		location.address = params[:location][:address]
 		location.description = params[:location][:description]

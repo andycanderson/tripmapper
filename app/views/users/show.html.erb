@@ -10,17 +10,22 @@
 		</div>
 
 		<!-- all trips made -->
-		<h2>All My Trips</h2>
+		<h2 id="all_my_trips">All My Trips</h2>
 		<div id="scrollable_trips">
-			<% @users_trips.to_a.each do |x|%>
-				<div>
-					<a class="edit_link" href="/trip_update/<%=x.id%>"><div class="u_button">U</div></a>
-					<a class="edit_link" href="/new_location/<%=x.id%>"><div class="plus_button">+</div></a>
-					<a class="edit_link" href="/trip_delete/<%=x.id%>"><div class="minus_button">-</div></a>
-					<a href="/trip_locations/<%=x.id%>"><h4><%=x.trip_name%></h4></a>
-					<br><br>
-				</div>
+			<%if @users_trips.to_a == []%>
+			<p id="none_placeholder">No trips yet. Add A Trip Above</p>
+			<%else%>
+				<% @users_trips.to_a.each do |x|%>
+					<div>
+						<a class="edit_link" href="/trip_update/<%=x.id%>"><div class="u_button">U</div></a>
+						<a class="edit_link" href="/new_location/<%=x.id%>"><div class="plus_button">+</div></a>
+						<a class="edit_link" href="/trip_delete/<%=x.id%>"><div class="minus_button">-</div></a>
+						<a href="/trip_locations/<%=x.id%>"><h4 id="trip_names"><%=x.trip_name%></h4></a>
+						<br><br>
+					</div>
+				<%end%>
 			<%end%>
+
 		</div>
 	</div>
 </div>

@@ -1,11 +1,11 @@
 class TripsController < ApplicationController
 	def new
-		@trip_id = params[:id]
+		
 	end
 
 	def create
+		# make new trip
 		trip = Trip.new
-		@trip_id = trip.id
 		trip.trip_name = params[:trip][:trip_name]
 		# add user id to trip created
 		trip.user = @current_user
@@ -14,8 +14,11 @@ class TripsController < ApplicationController
 	end
 
 	def update
+		# find trip by trip id
+		# instance trip id to pass id to form
 		@trip_id = params[:id]
 		trip = Trip.find_by(id: params[:id])
+		# pass information to view
 		@trip = trip
 
 		@trip_locations = Location.where(trip_id: @trip_id)
@@ -32,16 +35,12 @@ class TripsController < ApplicationController
 	end
 
 	def save
+		# find trip by id and save name change
 		trip = Trip.find_by(id: params[:id])
 		trip.trip_name = params[:trip][:trip_name]
 		trip.save!
 
 		redirect_to "/mylocations"
-	end
-
-	def show
-		trip = Trip.find_by(id: params[:id])
-
 	end
 
 	def delete

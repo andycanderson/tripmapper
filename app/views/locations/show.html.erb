@@ -9,8 +9,8 @@
 				<p><%=location.address%></p>
 				<p><%=location.to_coordinates[0]%>, <%=location.to_coordinates[1]%></p>
 				<p><%=location.description%></p>
-				<a href="/delete_location/<%=location.id%>">delete</a>
-				<a href="/update_location/<%=location.id%>">update</a>
+				<a class="add_delete" href="/delete_location/<%=location.id%>">delete</a>
+				<a class="add_delete" href="/update_location/<%=location.id%>">update</a>
 				<br><br>
 			<%end%>
 		</div>

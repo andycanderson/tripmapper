@@ -17,7 +17,6 @@
  .home_page{
  	margin:0;
  	padding:0;
- 	/*background-color: rgba(210,210,210,1);*/
  	background-image: url("background.jpg");
  	background-size: cover;
  	background-position: center;
@@ -253,41 +252,55 @@
  	height:400px;
  }
  .u_button{
- 	border:gray 1px solid;
+ 	border:rgba(150, 150, 150, 1) 1px solid;
  	display:inline-block;
  	width:20px;
  	height:20px;
  	text-align: center;
  	border-radius: 70px;
+ 	color:gray;
  }
  .plus_button{
- 	border:gray 1px solid;
+ 	border:rgba(150, 150, 150, 1) 1px solid;
  	display:inline-block;
  	width:20px;
  	height:20px;
  	text-align: center;
  	border-radius: 70px;
+ 	color:gray;
  }
  .minus_button{
- 	border:gray 1px solid;
+ 	border:rgba(150, 150, 150, 1) 1px solid;
  	display:inline-block;
  	width:20px;
  	height:20px;
  	text-align: center;
  	border-radius: 70px;
+ 	color:gray;
  }
  .u_button:hover{
- 	background-color: rgba(90, 50, 130, 1);
+ 	background-color: rgba(150, 150, 150, 1);
  	color: white;
  }
  .plus_button:hover{
- 	background-color: rgba(90, 50, 130, 1);
+ 	background-color: rgba(150, 150, 150, 1);
  	color: white;
  }
  .minus_button:hover{
- 	background-color: rgba(90, 50, 130, 1);
+ 	background-color: rgba(150, 150, 150, 1);
  	color: white;
  }
-
-
+ #trip_names{
+ 	margin-left: 5px;
+ 	color: rgba(0, 0, 238, 1);
+ }
+ .add_delete{
+ 	color: rgba(0, 0, 238, 1);
+ }
+ #none_placeholder{
+ 	text-align: center;
+ }
+ #all_my_trips{
+ 	margin-top: 15%;
+ }
  

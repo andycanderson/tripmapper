@@ -14,12 +14,12 @@ class UsersController < ApplicationController
 	end
 
 	def show
-
-		@user = User.find_by(params[:id])
 		# uses id stored in session in form of bson
+		@user = User.find_by(params[:id])
+		# find trips that have current user id
 		@users_trips = Trip.where(user_id: @current_user.id)
 
-		# change so only gets user's locations
+		# finds all user's locations and loads onto map
 		@all_locations = Location.where(user_id: @current_user.id)
 		@hash = Gmaps4rails.build_markers(@all_locations) do |location, marker|
   			marker.lat location.to_coordinates[0]
