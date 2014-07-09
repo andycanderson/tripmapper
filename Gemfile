@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,7 +41,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # # for images
 # gem "mongoid-paperclip", :require => "mongoid_paperclip"
-
+gem 'rails_12factor'
 gem 'pry', '~> 0.10.0'
 gem "mongoid", '~> 4.0.0.rc1', github: 'mongoid/mongoid'
 gem "geocoder"
