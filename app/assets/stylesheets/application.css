@@ -55,6 +55,7 @@
  	font-size: 70px;
  	padding:0;
  	margin:0;
+	font-family: 'Leckerli One', cursive;
  }
  .home_page .container{
  	max-width: 600px;
@@ -63,10 +64,10 @@
  .login_create_account{
  	margin-top:4%;
  	padding-top:5%;
- 	padding-bottom:10%; 
+ 	padding-bottom:5%; 
  	box-shadow: 0 0 3px;
  	border-radius: 5px;
- 	background-color: rgba(100,100,100,.1);
+ 	background-color: rgba(150,150,150,.5);
  }
  h3{
  	padding:0;
