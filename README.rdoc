@@ -2,8 +2,8 @@
 
 This app currently allows you to save locations in groupings called trips. 
 
-*Users can make collections of locations called trips.
+* Users can make collections of locations called trips.
 
-*Users can save locations of places on a searchable map
+* Users can save locations of places on a searchable map.
 
-*Users can see all saved locations and locations saved in trip groupings.
+* Users can see all saved locations and locations saved in trip groupings.
