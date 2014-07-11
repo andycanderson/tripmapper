@@ -19,6 +19,7 @@ class LocationsController < ApplicationController
 	def display_searched
 		location = Location.find_by(id: params[:id])
 		@location_id = location.id
+		@trip_id = location.trip_id
 		# shows location that was searched
 		@hash = Gmaps4rails.build_markers(location) do |location, marker|
   			marker.lat location.to_coordinates[0]
@@ -41,7 +42,7 @@ class LocationsController < ApplicationController
 	end
 
 	def save
-		redirect_to '/mylocations'
+		redirect_to "/trip_locations/#{params[:id]}"
 	end
 
 	def show
